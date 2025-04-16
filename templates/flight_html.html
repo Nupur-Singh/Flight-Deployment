@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Flight Price</title>
+    </head>
+
+    <body>
+        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dILIagVJXvo4ci-s8ElJxUpRvgmf_vx8VA&s",
+        alt="zomato image", width="200",height="50",style="float:left">
+        <link rel="stylesheet" href="{{url_for('static',filename='style_zom.css')}}"> -->
+    <style>
+            body{
+                background-image: url("data:image/jpeg;base64,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");
+                background-position: 100%;
+                background-size: cover;
+            }
+    </style>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+                <div class="navbar-header">
+                    <h1>Predict Flight Price</h1>
+                </div>
+    
+        </div>
+    </nav>
+
+<br><br><br>
+
+    <div class="container">
+        <form action="\predict" method="post">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="'card-body">
+                            <h5 class="card-title">Source</h5>
+                            <select name="Source" id="Source" required="required">
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Chennai">Chennai</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="'card-body">
+                            <h5 class="card-title">Destination</h5>
+                            <select name="Destination" id="Destination" required="required">
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Cochin">Cochin</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="'card-body">
+                            <h5 class="card-title">Departure</h5>
+                            <input type="datetime-local" name="Dep_Time" id="Dep_Time">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="'card-body">
+                            <h5 class="card-title">Arrival</h5>
+                            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="'card-body">
+                            <h5 class="card-title">Airline</h5>
+                            <select name="airline" id="airline" required="required">
+                                <option value="Jet Airways">Jet Airways</option>
+                                <option value="IndiGo">IndiGo</option>
+                                <option value="Air India">Air India</option>
+                                <option value="Vistara">Vistara</option>
+                                <option value="Multiple carriers">Multiple carriers</option>
+                                <option value="SpiceJet">SpiceJet</option>
+                                <option value="Air Asia">Air Asia</option>
+                                <option value="GoAir">GoAir</option>
+                                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                                <option value="Jet Airways Business">Jet Airways Business</option>
+                                <option value="Vistara Premium economy">Vistara Premium economy</option>
+                                <option value="Trujet">Trujet</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="'card-body">
+                            <h5 class="card-title">Tottal Stops</h5>
+                            <select name="stops" id="stops" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <br>
+            <br>
+            <!-- <input type="submit" value="Submit" class="btn btn-secondary"> -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <h3>{{prediction_text}}</h3>
+    </div>
+
+    </body>
+</html>
